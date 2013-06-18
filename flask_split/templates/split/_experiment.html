@@ -8,9 +8,11 @@
       <span class="start-time">{{ experiment.start_time.strftime('%Y-%m-%d') }}</span>
       <form class="form-reset-experiment" action="{{ url_for('.reset_experiment', experiment=experiment.name) }}" method="post">
         <input type="submit" class="btn" value="Reset Data">
+        <input name="_ct" type="hidden" value="{{ csrf_token() }}"/>
       </form>
       <form class="form-delete-experiment" action="{{ url_for('.delete_experiment', experiment=experiment.name) }}" method="post">
         <input type="submit" class="btn btn-danger" value="Delete">
+        <input name="_ct" type="hidden" value="{{ csrf_token() }}"/>
       </form>
     </div>
   </div>
@@ -79,6 +81,7 @@
               <form class="form-set-winner" action="{{ url_for('.set_experiment_winner', experiment=experiment.name) }}" method="post">
                 <input type="hidden" name="alternative" value="{{ alternative.name }}">
                 <input type="submit" value="Use this" class="btn btn-success btn-mini">
+                <input name="_ct" type="hidden" value="{{ csrf_token() }}"/>
               </form>
             {% endif %}
           </td>

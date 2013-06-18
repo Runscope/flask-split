@@ -133,7 +133,7 @@ def finished(experiment_name, reset=True):
                 _get_session().pop(experiment.key, None)
                 try:
                     session['split_finished'].remove(experiment.key)
-                except KeyError:
+                except ValueError:
                     pass
                 session.modified = True
             else:
