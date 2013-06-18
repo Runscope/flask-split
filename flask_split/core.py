@@ -124,7 +124,7 @@ def finished(experiment_name, reset=True):
         alternative_name = _get_session().get(experiment.key)
         if alternative_name:
             if 'split_finished' not in session:
-                session['split_finished'] = set()
+                session['split_finished'] = list()
             if experiment.key not in session['split_finished']:
                 alternative = Alternative(
                     redis, alternative_name, experiment_name)
