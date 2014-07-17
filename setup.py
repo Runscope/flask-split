@@ -18,7 +18,7 @@ class PyTest(Command):
 
 setup(
     name='Flask-Split',
-    version='0.2.0-runscope1',
+    version='0.2.0.1',  # customized by Runscope
     url='http://github.com/jpvanhal/flask-split',
     license='MIT',
     author='Janne Vanhala',
