@@ -18,7 +18,7 @@ class PyTest(Command):
 
 setup(
     name='Flask-Split',
-    version='0.2.0.1',  # customized by Runscope
+    version='0.2.0.2',  # customized by Runscope
     url='http://github.com/jpvanhal/flask-split',
     license='MIT',
     author='Janne Vanhala',
@@ -32,7 +32,7 @@ setup(
     platforms='any',
     install_requires=[
         'Flask>=0.7',
-        'Redis>=2.4.13',
+        'Redis>=2.10.3',
     ],
     cmdclass={'test': PyTest},
     classifiers=[
